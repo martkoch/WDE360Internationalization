@@ -1,10 +1,22 @@
-<mvc:View controllerName="com.sap.training.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.training.controller.Main">
+<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="__form0">
+    <sap.ui.layout.form:content>
+        <sap.ui.core:Title text="Title" id="__title0"/>
+        <Label text="{i18n>flightRatingLabel}" id="__label0"/>
+        <RatingIndicator change="ratingChange" maxValue="10"/>
+        <Text id="idText"/></sap.ui.layout.form:content>
+<sap.ui.layout.form:toolbar>
+    <Toolbar width="100%" id="__toolbar1">
+        <content>
+            <ToolbarSpacer id="__spacer0"/>
+            <Select selectedKey="item1" selectedItemId="__item0" id="__select0" change="languageChange">
+                <items>
+                    <sap.ui.core:ListItem text="Deutsch" key="de" id="__item0"/>
+                    <sap.ui.core:ListItem text="Englisch" key="en" id="__item1"/>
+                    </items>
+            </Select>
+        </content>
+    </Toolbar>
+</sap.ui.layout.form:toolbar>
+</sap.ui.layout.form:SimpleForm>
 </mvc:View>
